@@ -1,6 +1,7 @@
 ---
 import topoColors from "../images/aaaa.avif";
 import logo from "../images/veta.png";
+import Image from "astro/components/Image.astro";
 ---
 
 <section
@@ -17,18 +18,20 @@ import logo from "../images/veta.png";
   >
   </div> -->
 
-  <img
-    src={logo.src}
+  <Image
+    src={logo}
     alt="Logo de la empresa Veta que contrasta con el fondo del Hero"
     class="w-auto h-[40rem] absolute -bottom-52 right-20 z-2 animate-slide-up animate-delay-300 brightness-[0.2]"
+    loading="eager"
   />
 
   <div class="topo absolute size-full z-10"></div>
 
-  <img
-    src={topoColors.src}
+  <Image
+    src={topoColors}
     alt="Fondo Topografico para el Hero"
     class="absolute size-full object-cover opacity-20 animate-float"
+    loading="eager"
   />
 
   <div
@@ -77,13 +80,13 @@ import logo from "../images/veta.png";
                   d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </a>
-            <a
+            <!-- <a
               class="work-btn relative px-8 py-4 rounded-lg font-semibold border border-white/20 transition-all duration-500 overflow-hidden"
               onmouseenter="this.querySelector('span').textContent='Próximamente'; this.classList.add('text-red-500', 'border-red-500'); this.classList.remove('border-white/20');"
               onmouseleave="this.querySelector('span').textContent='Ver trabajo'; this.classList.remove('text-red-500', 'border-red-500'); this.classList.add('border-white/20');"
             >
               <span class="transition-all duration-500">Ver trabajo</span>
-            </a>
+            </a> -->
           </div>
 
           <div
@@ -117,9 +120,11 @@ import logo from "../images/veta.png";
   >
     <a
       href="#planes"
+      aria-label="Navegar hacia planes"
       class="text-white/30 hover:text-primary transition-colors"
     >
       <svg
+        aria-hidden="true"
         class="w-8 h-8"
         fill="none"
         stroke="currentColor"

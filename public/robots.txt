@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://veta.tech/sitemap.xml
+
+# Block access to development paths
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.astro/
+Disallow: /dist/
