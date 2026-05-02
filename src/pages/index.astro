@@ -9,55 +9,72 @@ import "../styles/global.css";
 
 const plans = [
   {
-    name: "Basic",
+    name: "Básico",
     price: "$289",
     description: "Perfecto para freelancers y proyectos pequeños",
     tier: "basic" as const,
     highlighted: false,
     features: [
-      "5 páginas web",
+      "Landing page para tu negocio",
       "Diseño responsive",
-      "1 mes de soporte",
-      "SEO básico",
+      "Soporte garantizado",
+      "SEO",
       "Formulario de contacto",
       "Hosting incluido",
     ],
   },
   {
-    name: "Advanced",
-    price: "$1,299",
+    name: "Avanzado",
+    price: "$589",
     description: "Ideal para empresas en crecimiento",
     tier: "advanced" as const,
     highlighted: true,
     features: [
-      "15 páginas web",
+      "Aplicacion web a medida",
       "Diseño custom + animaciones",
-      "3 meses de soporte prioritario",
+      "Sistemas administrativos con bases de datos",
       "SEO avanzado",
       "CMS integrado",
     ],
   },
   {
-    name: "Pro",
-    price: "$2,499",
-    description: "Solución completa para empresas",
+    name: "Personalizado",
+    price: "$???",
+    description: "Hagamos lo que quieras, sin límites",
     tier: "pro" as const,
     highlighted: false,
     features: [
-      "Páginas ilimitadas",
-      "Diseño premium + motion",
-      "6 meses de soporte 24/7",
-      "SEO técnico completo",
-      "CMS personalizado",
+      "Automatizaciones en redes sociales",
+      "Integraciones con Inteligencia Artificial",
+      "Creación de apps móviles",
+      "Conexión con APIs externas",
+      "Aplicaciones administrativas",
+      "Solo ten la mente abierta",
     ],
   },
 ];
 
 const features = [
-  { icon: '<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>', title: "Rápido", desc: "Tiempo de carga mínimo" },
-  { icon: '<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>', title: "Diseño", desc: "Interfaces que impactan" },
-  { icon: '<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>', title: "Seguro", desc: "Máxima protección" },
-  { icon: '<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>', title: "Responsive", desc: "Funciona en todos lados" },
+  {
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
+    title: "Rápido",
+    desc: "Tiempo de carga mínimo",
+  },
+  {
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>',
+    title: "Diseño",
+    desc: "Interfaces que impactan",
+  },
+  {
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>',
+    title: "Seguro",
+    desc: "Máxima protección",
+  },
+  {
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto mb-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>',
+    title: "Responsive",
+    desc: "Funciona en todos lados",
+  },
 ];
 ---
 
@@ -111,7 +128,10 @@ const features = [
       </div>
     </section>
 
-    <section class="py-24 px-6 bg-darker relative overflow-hidden">
+    <section
+      id="contacto"
+      class="py-24 px-6 bg-darker relative overflow-hidden"
+    >
       <div class="absolute inset-0 opacity-10">
         <div
           class="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,#478FC4_25%,transparent_25%,transparent_75%,#478FC4_75%)] bg-[length:50px_50px]"
@@ -138,7 +158,7 @@ const features = [
                 class="group bg-dark/50 border border-primary/20 rounded-2xl p-8 text-center hover:border-primary hover:glow-primary transition-all duration-500 hover:scale-105"
                 style={`animation-delay: ${i * 100}ms`}
               >
-                <div class="text-5xl mb-4" set:html={feature.icon}></div>
+                <div class="text-5xl mb-4" set:html={feature.icon} />
                 <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-accent transition-colors">
                   {feature.title}
                 </h3>
@@ -167,7 +187,8 @@ const features = [
           ahora.
         </p>
         <a
-          href="mailto:hola@veta.tech"
+          href="https://api.whatsapp.com/send/?phone=584125775296"
+          target="_blank"
           class="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:glow-primary"
         >
           <span>Hablemos</span>

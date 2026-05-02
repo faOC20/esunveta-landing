@@ -51,7 +51,9 @@ const {
 
   <div class="mb-8">
     <span class="font-display font-extrabold text-5xl text-white">{price}</span>
-    <span class="text-white/40 text-sm">/mes</span>
+    <span class="text-white/40 text-sm"
+      >{tier != "basic" ? "+ fee mensual" : ""}</span
+    >
   </div>
 
   <ul class="space-y-4 mb-8">

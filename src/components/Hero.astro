@@ -5,6 +5,7 @@ import logo from "../images/veta.png";
 
 <section
   class="relative min-h-screen flex items-center justify-center pt-20 z-100 overflow-hidden"
+  id="inicio"
 >
   <!-- <div
     class="absolute -bottom-10 right-[30rem] w-[350px] h-[900px] bg-primary/10 rounded-full -rotate-[36deg]"
@@ -77,10 +78,11 @@ import logo from "../images/veta.png";
               </svg>
             </a>
             <a
-              href="/work"
-              class="px-8 py-4 rounded-lg font-semibold border border-white/20 hover:border-accent hover:text-accent transition-all duration-300"
+              class="work-btn relative px-8 py-4 rounded-lg font-semibold border border-white/20 transition-all duration-500 overflow-hidden"
+              onmouseenter="this.querySelector('span').textContent='Próximamente'; this.classList.add('text-red-500', 'border-red-500'); this.classList.remove('border-white/20');"
+              onmouseleave="this.querySelector('span').textContent='Ver trabajo'; this.classList.remove('text-red-500', 'border-red-500'); this.classList.add('border-white/20');"
             >
-              Ver trabajo
+              <span class="transition-all duration-500">Ver trabajo</span>
             </a>
           </div>
 
@@ -136,5 +138,14 @@ import logo from "../images/veta.png";
 <style>
   .topo {
     box-shadow: inset 0 0 150px 100px #000000;
+  }
+
+  .work-btn span {
+    display: inline-block;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .work-btn:hover span {
+    transform: scale(0.95);
   }
 </style>
