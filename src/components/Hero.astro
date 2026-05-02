@@ -1,6 +1,6 @@
 ---
 import Logo from "../images/logo.svg";
-import LogoGemini from "../images/logogemini.svg";
+import topoColors from "../images/aaaa.avif";
 import Image from "astro/components/Image.astro";
 import logo3d from "../images/3Dlogo.png";
 import Topo from "../images/topowallpaper.svg";
@@ -19,17 +19,13 @@ import Topo from "../images/topowallpaper.svg";
   >
   </div>
 
-  <div class="topo absolute size-full z-10 animate-blur-in"></div>
+  <div class="topo absolute size-full z-10"></div>
 
-  <LogoGemini
-    class="topo absolute bottom-0 left-0 right-0 top-0 w-full h-full opacity-15 animate-blur-in"
-    style="background: radial-gradient(ellipse at center, transparent 100%, rgba(0,0,0,0.4) 100%);"
+  <img
+    src={topoColors.src}
+    alt="Fondo Topografico para el Hero"
+    class="absolute size-full object-cover opacity-20 animate-float"
   />
-
-  <!-- <div
-    class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"
-  >
-  </div> -->
 
   <div
     class="relative z-10 max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center"
@@ -38,7 +34,7 @@ import Topo from "../images/topowallpaper.svg";
       <h1
         class="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl leading-none tracking-tighter"
       >
-        <span class="text-title-gradient block animate-fade-in-left"
+        <span class="block animate-fade-in-left font-serif tracking-wide"
           >Soluciones</span
         >
         <span
@@ -136,7 +132,6 @@ import Topo from "../images/topowallpaper.svg";
 
 <style>
   .topo {
-    -webkit-box-shadow: inset -1px 2px 300px 300px #000000;
-    box-shadow: inset -1px 2px 170px 170px #000000;
+    box-shadow: inset 0 0 150px 100px #000000;
   }
 </style>
