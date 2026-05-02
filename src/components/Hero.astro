@@ -6,16 +6,124 @@ import Logo from "../images/logo.svg";
   class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
 >
   <div
-    class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"
+    class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"
   >
   </div>
 
+  <!-- <div
+    class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0"
+  >
+    <svg
+      class="topographic-bg absolute inset-0 w-full h-full"
+      viewBox="0 0 1920 1080"
+      preserveAspectRatio="xMidYMid slice"
+    >
+      <defs>
+        <pattern
+          id="topoPattern"
+          x="0"
+          y="0"
+          width="400"
+          height="400"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M-50,80 Q30,20 100,90 T200,80 T300,100 T400,70"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.8"
+          />
+          <path
+            d="M-50,150 Q50,80 120,160 T220,140 T320,170 T420,130"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.6"
+          />
+          <path
+            d="M-30,220 Q70,150 150,230 T280,200 T380,240"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.5"
+          />
+          <path
+            d="M0,300 Q100,220 200,310 T350,280 T450,320"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.4"
+          />
+          <path
+            d="M50,380 Q150,300 250,390 T400,360"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.3"
+          />
+          <path
+            d="M-20,50 Q80,-20 180,60 T340,40 T480,80"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.4"
+          />
+          <circle
+            cx="80"
+            cy="120"
+            r="100"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.3"
+          />
+          <circle
+            cx="280"
+            cy="250"
+            r="120"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.25"
+          />
+          <circle
+            cx="180"
+            cy="380"
+            r="80"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.2"
+          />
+          <path
+            d="M100,50 Q180,100 200,180 Q220,260 160,320"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.6"
+          />
+          <path
+            d="M300,80 Q350,150 320,220 Q290,290 340,350"
+            fill="none"
+            stroke="#478FC4"
+            stroke-width="0.5"
+          />
+        </pattern>
+        <filter id="topoGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="40" result="glow" />
+          <feComposite in="glow" in2="SourceGraphic" operator="out" result="inverseglow" />
+          <feFlood flood-color="#478FC4" flood-opacity="0.15" result="coloredglow" />
+          <feComposite in="coloredglow" in2="inverseglow" operator="in" result="finalglow" />
+          <feMerge>
+            <feMergeNode in="finalglow" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#topoPattern)" style="opacity: 0.12;" />
+      <g filter="url(#topoGlow)">
+        <rect width="100%" height="100%" fill="transparent" />
+      </g>
+    </svg>
+  </div> -->
+
   <div
-    class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float"
+    class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/30 rounded-full blur-[120px] animate-float"
   >
   </div>
   <div
-    class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-float"
+    class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/20 rounded-full blur-[100px] animate-float"
     style="animation-delay: -3s;"
   >
   </div>
@@ -24,35 +132,21 @@ import Logo from "../images/logo.svg";
     class="relative z-10 max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center"
   >
     <div class="gap-10 flex flex-col col-span-2">
-      <!-- <div
-        class="items-center gap-2 bg-primary/10 border border-primary/30 px-4 py-2 rounded-full opacity-0 animate-fade-in"
-      >
-        <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
-        <span class="text-sm font-medium text-primary"
-          >Soluciones que rompen barreras</span
-        >
-      </div> -->
-
       <h1
-        class="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl leading-none tracking-tighter opacity-0 animate-slide-up"
+        class="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl leading-none tracking-tighter"
       >
-        <span class="text-gradient">Soluciones</span>
-        <br />
-        <span class="text-white">sin límites</span>
+        <span class="text-title-gradient block">Soluciones</span>
+        <span class="text-title-gradient-reverse block">sin límites</span>
       </h1>
 
       <div class="flex w-full relative">
         <div class="flex flex-col gap-10">
-          <p
-            class="text-lg md:text-xl text-white/60 max-w-lg opacity-0 animate-slide-up animate-delay-200"
-          >
+          <p class="text-lg md:text-xl text-white/60 max-w-lg">
             Construimos soluciones digitales que transforman industrias. Diseño
             disruptivo, código de élite, resultados que impactan.
           </p>
 
-          <div
-            class="flex flex-wrap gap-4 opacity-0 animate-slide-up animate-delay-300"
-          >
+          <div class="flex flex-wrap gap-4">
             <a
               href="#planes"
               class="group bg-primary hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:glow-primary"
@@ -79,9 +173,7 @@ import Logo from "../images/logo.svg";
             </a>
           </div>
 
-          <div
-            class="flex items-center gap-8 pt-8 opacity-0 animate-slide-up animate-delay-400"
-          >
+          <div class="flex items-center gap-8 pt-8">
             <div>
               <p class="font-display font-bold text-4xl text-primary">+50</p>
               <p class="text-sm text-white/40">Proyectos</p>
@@ -94,36 +186,14 @@ import Logo from "../images/logo.svg";
             </div>
           </div>
         </div>
-        <!-- <div class="animate-slide-up animate-delay-200 relative">
+
+        <div class="animate-slide-up animate-delay-200 bg-red-200">
           <Logo
             class="[transform:rotate(-10deg)] hover:[transform:rotate(-20deg)] transition-transform duration-500 absolute -top-20 left-10 w-80"
           />
-        </div> -->
+        </div>
       </div>
     </div>
-
-    <!-- <div class="relative hidden lg:block">
-      <div class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/30 rounded-3xl blur-2xl opacity-50" />
-      <div class="relative bg-darker border border-primary/30 rounded-3xl p-8 glow-primary">
-        <div class="flex items-center gap-2 mb-6">
-          <div class="w-3 h-3 rounded-full bg-red-500" />
-          <div class="w-3 h-3 rounded-full bg-yellow-500" />
-          <div class="w-3 h-3 rounded-full bg-green-500" />
-        </div>
-        <div class="space-y-4 font-mono text-sm">
-          <p class="text-white/40"><span class="text-primary">const</span> <span class="text-accent">veta</span> = {</p>
-          <p class="text-white/60 pl-4"><span class="text-primary">misión</span>: <span class="text-accent">"disrumpir"</span>,</p>
-          <p class="text-white/60 pl-4"><span class="text-primary">enfoque</span>: <span class="text-accent">"resultados"</span>,</p>
-          <p class="text-white/60 pl-4"><span class="text-primary">pasión</span>: <span class="text-accent">"innovación"</span></p>
-          <p class="text-white/40">}</p>
-        </div>
-        <div class="mt-6 flex gap-3">
-          <div class="h-2 w-16 bg-primary/50 rounded animate-pulse" />
-          <div class="h-2 w-24 bg-accent/50 rounded animate-pulse" style="animation-delay: 0.5s;" />
-          <div class="h-2 w-12 bg-primary/30 rounded animate-pulse" style="animation-delay: 1s;" />
-        </div>
-      </div>
-    </div> -->
   </div>
 
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
