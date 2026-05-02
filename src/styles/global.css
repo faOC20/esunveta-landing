@@ -73,6 +73,23 @@
     text-shadow: -8px 2px 8px rgba(38, 38, 38, 0.2);
   }
 
+  .animate-fade-in-left {
+    animation: fade-in-left 0.6s ease-out forwards;
+  }
+
+  @keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+      filter: blur(4px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0px);
+    }
+  }
+
   .text-title-gradient-reverse {
     background: linear-gradient(135deg, #478fc4 0%, #e7c365 100%);
     -webkit-background-clip: text;
