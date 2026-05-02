@@ -1,0 +1,187 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import BentoGrid from "../components/BentoGrid.astro";
+import PricingCard from "../components/PricingCard.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+const plans = [
+  {
+    name: "Basic",
+    price: "$289",
+    description: "Perfecto para freelancers y proyectos pequeños",
+    tier: "basic" as const,
+    highlighted: false,
+    features: [
+      "5 páginas web",
+      "Diseño responsive",
+      "1 mes de soporte",
+      "SEO básico",
+      "Formulario de contacto",
+      "Hosting incluido",
+    ],
+  },
+  {
+    name: "Advanced",
+    price: "$1,299",
+    description: "Ideal para empresas en crecimiento",
+    tier: "advanced" as const,
+    highlighted: true,
+    features: [
+      "15 páginas web",
+      "Diseño custom + animaciones",
+      "3 meses de soporte prioritario",
+      "SEO avanzado",
+      "CMS integrado",
+    ],
+  },
+  {
+    name: "Pro",
+    price: "$2,499",
+    description: "Solución completa para empresas",
+    tier: "pro" as const,
+    highlighted: false,
+    features: [
+      "Páginas ilimitadas",
+      "Diseño premium + motion",
+      "6 meses de soporte 24/7",
+      "SEO técnico completo",
+      "CMS personalizado",
+    ],
+  },
+];
+
+const features = [
+  { icon: "⚡", title: "Rápido", desc: "Tiempo de carga mínimo" },
+  { icon: "🎨", title: "Diseño", desc: "Interfaces que impactan" },
+  { icon: "🔒", title: "Seguro", desc: "Máxima protección" },
+  { icon: "📱", title: "Responsive", desc: "Funciona en todos lados" },
+];
+---
+
+<Layout title="Inicio">
+  <Navbar />
+
+  <main>
+    <Hero />
+
+    <section id="planes" class="py-24 px-6 relative overflow-hidden">
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl"
+      >
+      </div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16 opacity-0 animate-fade-in">
+          <span
+            class="inline-block px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-sm font-medium text-primary mb-6"
+          >
+            Nuestros planes
+          </span>
+          <h2
+            class="font-display font-bold text-4xl md:text-6xl text-white mb-4"
+          >
+            Elige tu <span class="text-gradient">arma</span>
+          </h2>
+          <p class="text-white/50 text-lg max-w-2xl mx-auto">
+            Planes diseñados para cada etapa de tu negocio. Sin compromisos
+            ocultos.
+          </p>
+        </div>
+
+        <BentoGrid cols="grid-cols-1 md:grid-cols-3" gap="gap-8">
+          {
+            plans.map((plan) => (
+              <div
+                class="opacity-0 animate-slide-up"
+                style={`animation-delay: ${plans.indexOf(plan) * 150}ms`}
+              >
+                <PricingCard {...plan} />
+              </div>
+            ))
+          }
+        </BentoGrid>
+      </div>
+    </section>
+
+    <section class="py-24 px-6 bg-darker relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,#478FC4_25%,transparent_25%,transparent_75%,#478FC4_75%)] bg-[length:50px_50px]"
+        >
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16">
+          <h2
+            class="font-display font-bold text-4xl md:text-5xl text-white mb-4"
+          >
+            ¿Por qué <span class="text-gradient">Veta</span>?
+          </h2>
+          <p class="text-white/50 text-lg max-w-xl mx-auto">
+            No somos una agencia más. Somos tu aliado tecnológico.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {
+            features.map((feature, i) => (
+              <div
+                class="group bg-dark/50 border border-primary/20 rounded-2xl p-8 text-center hover:border-primary hover:glow-primary transition-all duration-500 hover:scale-105"
+                style={`animation-delay: ${i * 100}ms`}
+              >
+                <div class="text-5xl mb-4">{feature.icon}</div>
+                <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-accent transition-colors">
+                  {feature.title}
+                </h3>
+                <p class="text-white/40 text-sm">{feature.desc}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-6 relative">
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+      >
+      </div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2
+          class="font-display font-extrabold text-4xl md:text-6xl text-white mb-6"
+        >
+          ¿Listo para <span class="text-gradient">romperla</span>?
+        </h2>
+        <p class="text-white/50 text-xl mb-10 max-w-2xl mx-auto">
+          No esperamos más. El momento de transformar tu presencia digital es
+          ahora.
+        </p>
+        <a
+          href="mailto:hola@veta.tech"
+          class="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:glow-primary"
+        >
+          <span>Hablemos</span>
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

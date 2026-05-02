@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Veta - Soluciones tecnológicas disruptivas. Transformamos ideas en realidades digitales.' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | Veta</title>
+  </head>
+  <body class="bg-dark text-white font-body antialiased">
+    <slot />
+  </body>
+</html>
