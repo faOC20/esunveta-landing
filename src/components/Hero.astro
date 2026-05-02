@@ -1,123 +1,13 @@
 ---
 import Logo from "../images/logo.svg";
+import Image from "astro/components/Image.astro";
+import logo3d from "../images/3Dlogo.png";
+import Topo from "../images/topowallpaper.svg";
 ---
 
 <section
-  class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+  class="relative min-h-screen flex items-center justify-center pt-20 z-100"
 >
-  <div
-    class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"
-  >
-  </div>
-
-  <!-- <div
-    class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0"
-  >
-    <svg
-      class="topographic-bg absolute inset-0 w-full h-full"
-      viewBox="0 0 1920 1080"
-      preserveAspectRatio="xMidYMid slice"
-    >
-      <defs>
-        <pattern
-          id="topoPattern"
-          x="0"
-          y="0"
-          width="400"
-          height="400"
-          patternUnits="userSpaceOnUse"
-        >
-          <path
-            d="M-50,80 Q30,20 100,90 T200,80 T300,100 T400,70"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.8"
-          />
-          <path
-            d="M-50,150 Q50,80 120,160 T220,140 T320,170 T420,130"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.6"
-          />
-          <path
-            d="M-30,220 Q70,150 150,230 T280,200 T380,240"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.5"
-          />
-          <path
-            d="M0,300 Q100,220 200,310 T350,280 T450,320"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.4"
-          />
-          <path
-            d="M50,380 Q150,300 250,390 T400,360"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.3"
-          />
-          <path
-            d="M-20,50 Q80,-20 180,60 T340,40 T480,80"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.4"
-          />
-          <circle
-            cx="80"
-            cy="120"
-            r="100"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.3"
-          />
-          <circle
-            cx="280"
-            cy="250"
-            r="120"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.25"
-          />
-          <circle
-            cx="180"
-            cy="380"
-            r="80"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.2"
-          />
-          <path
-            d="M100,50 Q180,100 200,180 Q220,260 160,320"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.6"
-          />
-          <path
-            d="M300,80 Q350,150 320,220 Q290,290 340,350"
-            fill="none"
-            stroke="#478FC4"
-            stroke-width="0.5"
-          />
-        </pattern>
-        <filter id="topoGlow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="40" result="glow" />
-          <feComposite in="glow" in2="SourceGraphic" operator="out" result="inverseglow" />
-          <feFlood flood-color="#478FC4" flood-opacity="0.15" result="coloredglow" />
-          <feComposite in="coloredglow" in2="inverseglow" operator="in" result="finalglow" />
-          <feMerge>
-            <feMergeNode in="finalglow" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#topoPattern)" style="opacity: 0.12;" />
-      <g filter="url(#topoGlow)">
-        <rect width="100%" height="100%" fill="transparent" />
-      </g>
-    </svg>
-  </div> -->
-
   <div
     class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/30 rounded-full blur-[120px] animate-float"
   >
@@ -127,6 +17,18 @@ import Logo from "../images/logo.svg";
     style="animation-delay: -3s;"
   >
   </div>
+
+  <div class="topo absolute size-full z-20"></div>
+
+  <Topo
+    class="topo absolute bottom-0 left-0 right-0 top-0 w-full h-full opacity-10"
+    style="background: radial-gradient(ellipse at center, transparent 100%, rgba(0,0,0,0.4) 100%);"
+  />
+
+  <!-- <div
+    class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"
+  >
+  </div> -->
 
   <div
     class="relative z-10 max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-16 items-center"
@@ -141,7 +43,7 @@ import Logo from "../images/logo.svg";
 
       <div class="flex w-full relative">
         <div class="flex flex-col gap-10">
-          <p class="text-lg md:text-xl text-white/60 max-w-lg">
+          <p class="z-100 text-lg md:text-xl text-white/80 max-w-lg">
             Construimos soluciones digitales que transforman industrias. Diseño
             disruptivo, código de élite, resultados que impactan.
           </p>
@@ -187,16 +89,17 @@ import Logo from "../images/logo.svg";
           </div>
         </div>
 
-        <div class="animate-slide-up animate-delay-200 bg-red-200">
-          <Logo
-            class="[transform:rotate(-10deg)] hover:[transform:rotate(-20deg)] transition-transform duration-500 absolute -top-20 left-10 w-80"
-          />
-        </div>
+        <!-- <img
+          src={logo3d.src}
+          alt="Logo de la empresa en 3D"
+          class="absolute transition-all duration-500 -right-56 animate-slide-up animate-delay-200 aspect-square w-[550px] h-auto"
+          style="mask-image: radial-gradient(circle at center, black 50%, transparent 75%); -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 75%);"
+        /> -->
       </div>
     </div>
   </div>
 
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+  <div class="z-30 absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
     <a
       href="#planes"
       class="text-white/30 hover:text-primary transition-colors"
@@ -216,3 +119,10 @@ import Logo from "../images/logo.svg";
     </a>
   </div>
 </section>
+
+<style>
+  .topo {
+    -webkit-box-shadow: inset -1px 2px 300px 300px #000000;
+    box-shadow: inset -1px 2px 170px 170px #000000;
+  }
+</style>
