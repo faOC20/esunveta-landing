@@ -1,15 +1,12 @@
 ---
-import Logo from "../images/logo.svg";
 import topoColors from "../images/aaaa.avif";
-import Image from "astro/components/Image.astro";
-import logo3d from "../images/3Dlogo.png";
-import Topo from "../images/topowallpaper.svg";
+import logo from "../images/veta.png";
 ---
 
 <section
   class="relative min-h-screen flex items-center justify-center pt-20 z-100 overflow-hidden"
 >
-  <div
+  <!-- <div
     class="absolute -bottom-10 right-[30rem] w-[350px] h-[900px] bg-primary/10 rounded-full -rotate-[36deg]"
   >
   </div>
@@ -17,7 +14,13 @@ import Topo from "../images/topowallpaper.svg";
   <div
     class="absolute -bottom-10 right-56 w-[350px] h-[900px] bg-accent/10 rounded-full rotate-[36deg]"
   >
-  </div>
+  </div> -->
+
+  <img
+    src={logo.src}
+    alt="Logo de la empresa Veta que contrasta con el fondo del Hero"
+    class="w-auto h-[40rem] absolute -bottom-52 right-20 z-2 animate-slide-up animate-delay-300 brightness-[0.2]"
+  />
 
   <div class="topo absolute size-full z-10"></div>
 
