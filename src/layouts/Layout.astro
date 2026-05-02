@@ -8,12 +8,12 @@ interface Props {
 const {
   title,
   description = "Veta - Soluciones tecnológicas disruptivas. Transformamos ideas en realidades digitales.",
-  keywords = "desarrollo web, diseño UX, aplicaciones móviles, SaaS, fintech, blockchain, IA, Venezuela",
+  keywords = "veta, veta solutions, esunveta, un veta, soluciones tecnológicas, desarrollo web, diseño UX, aplicaciones móviles, SaaS, fintech, blockchain, IA, Venezuela",
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL("/og-image.svg", Astro.site);
-const siteUrl = "https://veta.tech";
+const siteUrl = "https://esunveta.com";
 const pagePath = Astro.url.pathname;
 const isHomePage = pagePath === "/";
 ---
@@ -26,7 +26,10 @@ const isHomePage = pagePath === "/";
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Veta" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <meta name="theme-color" content="#0a0a0a" />
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
@@ -46,7 +49,7 @@ const isHomePage = pagePath === "/";
       /></noscript
     >
 
-    <title>{title} | Veta</title>
+    <title>Veta</title>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -64,59 +67,69 @@ const isHomePage = pagePath === "/";
     <meta name="geo.region" content="VE" />
     <meta name="geo.placename" content="Venezuela" />
 
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Veta",
-      "url": siteUrl,
-      "description": "Soluciones tecnológicas que rompen barreras",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": `${siteUrl}/?q={search_term_string}`
-        },
-        "query-input": "required name=search_term_string"
-      }
-    })} />
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Veta",
-      "url": siteUrl,
-      "logo": `${siteUrl}/favicon.png`,
-      "description": "Soluciones tecnológicas que rompen barreras. Diseño disruptivo, código de élite, resultados que impactan.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "sales",
-        "url": "https://api.whatsapp.com/send/?phone=584125775296"
-      },
-      "sameAs": [
-        "https://api.whatsapp.com/send/?phone=584125775296"
-      ]
-    })} />
-
-    {!isHomePage && (
-      <script type="application/ld+json" set:html={JSON.stringify({
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Inicio",
-            "item": siteUrl
+        "@type": "WebSite",
+        name: "Veta",
+        url: siteUrl,
+        description: "Soluciones tecnológicas que rompen barreras",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${siteUrl}/?q={search_term_string}`,
           },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": title,
-            "item": canonicalURL.toString()
-          }
-        ]
-      })} />
-    )}
+          "query-input": "required name=search_term_string",
+        },
+      })}
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Veta",
+        url: siteUrl,
+        logo: `${siteUrl}/favicon.png`,
+        description:
+          "Soluciones tecnológicas que rompen barreras. Diseño disruptivo, código de élite, resultados que impactan.",
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          url: "https://api.whatsapp.com/send/?phone=584125775296",
+        },
+        sameAs: ["https://api.whatsapp.com/send/?phone=584125775296"],
+      })}
+    />
+
+    {
+      !isHomePage && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Inicio",
+                item: siteUrl,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: title,
+                item: canonicalURL.toString(),
+              },
+            ],
+          })}
+        />
+      )
+    }
   </head>
   <body class="bg-dark text-white font-body antialiased">
     <a
