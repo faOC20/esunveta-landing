@@ -9,4 +9,7 @@ export default defineConfig({
     webAnalytics: { enabled: true },
   }),
   trailingSlash: "never",
+  server: {
+    allowedHosts: ["rpsdgr-ip-200-82-141-151.tunnelmole.net"],
+  },
 });
