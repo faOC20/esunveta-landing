@@ -15,11 +15,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://esunveta.com/work/</loc>
+    <loc>https://esunveta.com/work</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://esunveta.com/work/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://esunveta.com/work/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://esunveta.com/work" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://esunveta.com/work" />
   </url>
 </urlset>
