@@ -7,7 +7,6 @@ export default defineConfig({
   integrations: [tailwind()],
   adapter: vercel({
     webAnalytics: { enabled: true },
-    speedInsights: { enabled: true },
   }),
   trailingSlash: "never",
   server: {
