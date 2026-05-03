@@ -1,4 +1,6 @@
 ---
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
 interface Props {
   title: string;
   description?: string;
@@ -16,6 +18,8 @@ const ogImage = new URL("/og-image.jpg", Astro.site);
 const siteUrl = "https://esunveta.com";
 const pagePath = Astro.url.pathname;
 const isHomePage = pagePath === "/";
+
+injectSpeedInsights();
 ---
 
 <!doctype html>
