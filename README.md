@@ -1,4 +1,4 @@
-# 🚀 Veta - Soluciones Tecnológicas Disruptivas
+# Veta - Soluciones Tecnológicas Disruptivas
 
 ![Banner de Veta](./public/screenshots/hero-desktop.png)
 
