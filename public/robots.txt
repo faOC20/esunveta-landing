@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://veta.tech/sitemap.xml
+Sitemap: https://esunveta.com/sitemap.xml
 
 # Block access to development paths
 Disallow: /src/
