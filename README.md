@@ -6,7 +6,7 @@
 
 ---
 
-## ✨ Características
+## Características
 
 - **Diseño Premium**: Interfaz moderna y elegante con animaciones fluidas
 - **100% Responsive**: Optimizado para desktop, tablet y móvil
@@ -16,41 +16,42 @@
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
-| Tecnología | Propósito |
-|------------|-----------|
-| ![Astro](https://img.shields.io/badge/-Astro-FF5D01?logo=astro&logoColor=white) | Framework web |
+| Tecnología                                                                                      | Propósito             |
+| ----------------------------------------------------------------------------------------------- | --------------------- |
+| ![Astro](https://img.shields.io/badge/-Astro-FF5D01?logo=astro&logoColor=white)                 | Framework web         |
 | ![Tailwind CSS](https://img.shields.io/badge/-Tailwind-06B6D4?logo=tailwindcss&logoColor=white) | Estilos utility-first |
-| ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white) | Tipado estático |
-| ![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white) | Despliegue |
+| ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)  | Tipado estático       |
+| ![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white)              | Despliegue            |
 
 ---
 
-## 📱 Vista Previa
+## Vista Previa
 
 ### Desktop
 
 #### Hero Section
+
 ![Hero Desktop](./public/screenshots/hero-desktop.png)
 
 #### Planes y Precios
+
 ![Planes Desktop](./public/screenshots/planes-desktop.png)
 
 #### Sección de Contacto
+
 ![Contacto Desktop](./public/screenshots/contacto-desktop.png)
 
 ### Móvil
 
 #### Hero Mobile
-![Hero Mobile](./public/screenshots/hero-mobile.png)
 
-#### Planes Mobile
-![Planes Mobile](./public/screenshots/planes-mobile.png)
+![Hero Mobile](./public/screenshots/hero-mobile.png)
 
 ---
 
-## 💻 Desarrollo Local
+## Desarrollo Local
 
 ```bash
 # Clonar el repositorio
@@ -71,7 +72,7 @@ npm run build
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 ├── public/
@@ -89,7 +90,7 @@ npm run build
 
 ---
 
-## 🌐 Despliegue
+## Despliegue
 
 El sitio está desplegado en **Vercel** y disponible en:
 
@@ -97,22 +98,10 @@ El sitio está desplegado en **Vercel** y disponible en:
 
 ---
 
-## 📬 Contacto
+## Contacto
 
 ¿Tienes un proyecto en mente? Hablemos.
 
 [![WhatsApp](https://img.shields.io/badge/-WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send/?phone=584125775296)
 
 ---
-
-## 📝 Licencia
-
-Este proyecto es propiedad de **Veta**. Todos los derechos reservados.
-
----
-
-<div align="center">
-
-**Construido con 💜 por [Veta](https://esunveta.com)**
-
-</div>
