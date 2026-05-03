@@ -49,7 +49,7 @@ const isHomePage = pagePath === "/";
       /></noscript
     >
 
-    <title>Veta</title>
+    <title>Veta - Desarrollo Web, CRM e IA en Venezuela</title>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -102,6 +102,32 @@ const isHomePage = pagePath === "/";
           url: "https://api.whatsapp.com/send/?phone=584125775296",
         },
         sameAs: ["https://api.whatsapp.com/send/?phone=584125775296"],
+      })}
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        name: "Veta",
+        url: siteUrl,
+        image: `${siteUrl}/og-image.jpg`,
+        description:
+          "Tu socio tecnológico en Venezuela. Desarrollo web de alto rendimiento, integraciones inteligentes de CRM y soluciones de IA personalizadas.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Cumaná",
+          addressCountry: "VE",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          telephone: "+584125775296",
+          availableLanguage: ["Spanish", "English"],
+        },
+        areaServed: "VE",
+        priceRange: "$$",
       })}
     />
 
