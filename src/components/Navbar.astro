@@ -106,9 +106,19 @@ import Image from "astro/components/Image.astro";
   const menuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
+  const closeMenu = () => {
+    mobileMenu?.classList.add("hidden");
+    menuBtn?.setAttribute("aria-expanded", "false");
+    menuBtn?.setAttribute("aria-label", "Abrir menú de navegación");
+  };
+
   menuBtn?.addEventListener("click", () => {
     const isExpanded = mobileMenu?.classList.toggle("hidden") === false;
     menuBtn?.setAttribute("aria-expanded", String(isExpanded));
     menuBtn?.setAttribute("aria-label", isExpanded ? "Cerrar menú de navegación" : "Abrir menú de navegación");
+  });
+
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 </script>
