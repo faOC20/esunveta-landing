@@ -67,24 +67,28 @@ const isHomePage = pagePath === "/";
     <meta name="geo.region" content="VE" />
     <meta name="geo.placename" content="Venezuela" />
 
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "Veta",
-        url: siteUrl,
-        description: "Soluciones tecnológicas que rompen barreras",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: `${siteUrl}/?q={search_term_string}`,
-          },
-          "query-input": "required name=search_term_string",
-        },
-      })}
-    />
+    {
+      isHomePage && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Veta",
+            url: siteUrl,
+            description: "Soluciones tecnológicas en Venezuela: Apps Web, Móviles, IA y Automatizaciones",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: `${siteUrl}/?q={search_term_string}`,
+              },
+              "query-input": "required name=search_term_string",
+            },
+          })}
+        />
+      )
+    }
 
     <script
       type="application/ld+json"
