@@ -80,13 +80,24 @@ import Image from "astro/components/Image.astro";
                   d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </a>
-            <!-- <a
-              class="work-btn relative px-8 py-4 rounded-lg font-semibold border border-white/20 transition-all duration-500 overflow-hidden"
-              onmouseenter="this.querySelector('span').textContent='Próximamente'; this.classList.add('text-red-500', 'border-red-500'); this.classList.remove('border-white/20');"
-              onmouseleave="this.querySelector('span').textContent='Ver trabajo'; this.classList.remove('text-red-500', 'border-red-500'); this.classList.add('border-white/20');"
+            <a
+              href="/work"
+              class="group bg-primary hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:glow-primary"
             >
-              <span class="transition-all duration-500">Ver trabajo</span>
-            </a> -->
+              Ver trabajo
+              <svg
+                class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
           </div>
 
           <div

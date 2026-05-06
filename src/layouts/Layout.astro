@@ -113,6 +113,34 @@ const isHomePage = pagePath === "/";
           url: "https://api.whatsapp.com/send/?phone=584125775296",
         },
         sameAs: ["https://api.whatsapp.com/send/?phone=584125775296"],
+        hasPart: {
+          "@type": "WebPage",
+          name: "Portafolio de Proyectos",
+          url: `${siteUrl}/work`,
+        },
+      })}
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SiteNavigationElement",
+        name: "Navegación principal",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Inicio",
+            url: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Portafolio",
+            url: `${siteUrl}/work`,
+          },
+        ],
       })}
     />
 
