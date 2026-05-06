@@ -3,6 +3,7 @@ const currentYear = new Date().getFullYear();
 import { Image } from "astro:assets";
 import logotipo from "../images/logocompleto.png";
 import WhasappIcon from "../images/Whatsapp.svg";
+import MailIcon from "../images/gmail.svg";
 
 const footerLinks = [
   { label: "Inicio", href: "/" },
@@ -15,6 +16,11 @@ const socialLinks = [
     label: "WhatsApp",
     href: "https://api.whatsapp.com/send/?phone=584125775296",
     icon: WhasappIcon,
+  },
+  {
+    label: "Gmail",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=esunveta.solutions@gmail.com",
+    icon: MailIcon,
   },
   {
     label: "Instagram",
@@ -60,7 +66,7 @@ const socialLinks = [
                 class="w-10 h-10 bg-primary/10 border border-primary/30 rounded-lg flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300"
                 aria-label={social.label}
               >
-                {typeof social.icon === 'string' ? (
+                {typeof social.icon === "string" ? (
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d={social.icon} />
                   </svg>
